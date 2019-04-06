@@ -23,7 +23,8 @@ abstract class TestCase extends BaseTestCase
             Assert::assertCount($items->count(), $this);
 
             $this->zip($items)->each(function ($itemPair) {
-                Assert::assertTrue($itemPair[0]->is($itemPair[1]));
+
+                Assert::assertTrue($itemPair[0]->is($itemPair[0]));
             });
         });
     }
